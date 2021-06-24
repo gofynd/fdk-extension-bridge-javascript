@@ -15,7 +15,8 @@ class Toggle extends Component{
      * @param {*} config 
      * 
      * {
-     *     "label": "",
+     *     "activeLabel": "",
+     *     "inactiveLabel": "",
      *     "id": "", //optional
      *     "disabled": true/false // default value false
      * }
@@ -23,10 +24,12 @@ class Toggle extends Component{
     constructor(extension, config) {
         super(extension, c_type, config.id);
         this.disabled = config.disabled || false;
-        this.label =  config.label;
+        this.activeLabel =  config.activeLabel || 'Active';
+        this.inactiveLabel =  config.inactiveLabel || 'Inactive';
         this.config = {
             disabled: this.disabled,
-            label: this.label
+            activeLabel: this.activeLabel,
+            inactiveLabel: this.inactiveLabel,
         }
     }
     
