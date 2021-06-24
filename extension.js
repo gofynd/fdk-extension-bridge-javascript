@@ -18,6 +18,14 @@ class Extension {
     //     this.transport.init();
     // }
 
+    redirect(payload){
+        if(!payload.path){
+            throw "path missing";
+        }
+        payload.target = 'Redirect';
+        this.transport.dispatch(payload);
+    }
+
     destroy() {
         this.transport.destroy();
     }
