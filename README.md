@@ -36,7 +36,7 @@ let context = new components.ContextItem(ext, {
 let toggle_unsubcribe_handler = toggle.subscribe(components.ContextItem.Actions.CLICK, (event) => {
         // your code
 });
-context.dispatch({});
+context.dispatch();
 
 // For destroy extesnion bridge
 
