@@ -36,11 +36,11 @@ btn.dispatch()
 btn.unsubcribe(unsubcribe_handler);
 
 
-let toggle = new components.Toggle(ext, {
+let toggle = new components.ToggleButton(ext, {
     label: "Active",
 });
 let toggle_unsubcribe_handler = toggle.subscribe(
-    components.Toggle.Actions.CHANGE,
+    components.ToggleButton.Actions.CHANGE,
     function (event3) {
         console.log(event3, 'event3')
     }
