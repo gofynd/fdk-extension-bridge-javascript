@@ -35,7 +35,7 @@ toggle.dispatch({value: true});
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/readme/demo/toggle_button.png" alt="Toggle Button"><hr>
 
-For Including Context Menu Itrm
+For Including Context Menu Item
 
 ```javascript
 let context = new components.ContextMenuItem(ext, {
