@@ -3,7 +3,7 @@
 const {
     Extension,
     components
-} = require("./index");
+} = require("../index");
 
 
 

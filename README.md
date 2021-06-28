@@ -19,6 +19,7 @@ let unsubcribe_handler = btn.subscribe(components.Button.Actions.CLICK, (event) 
 });
 btn.dispatch();
 ```
+<img width=600px src="https://github.com/gofynd/fdk-extension-bridge-javascript/readme/demo/button.png" alt="Button"><br><br><br><br><hr>
 
 For Including Toggle Button
 
@@ -32,6 +33,7 @@ let toggle_unsubcribe_handler = toggle.subscribe(components.ToggleButton.Actions
 });
 toggle.dispatch({value: true});
 ```
+<img width=600px src="https://github.com/gofynd/fdk-extension-bridge-javascript/readme/demo/toggle_button.png" alt="Toggle Button"><br><br><br><br><hr>
 
 For Including Context Menu Itrm
 
@@ -44,6 +46,7 @@ let toggle_unsubcribe_handler = toggle.subscribe(components.ContextMenuItem.Acti
 });
 context.dispatch();
 ```
+<img width=600px src="https://github.com/gofynd/fdk-extension-bridge-javascript/readme/demo/context_item.png" alt="Context Item"><br><br><br><br><hr>
 
 For destroy extesnion bridge
 
