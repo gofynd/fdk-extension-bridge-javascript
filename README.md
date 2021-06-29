@@ -1,5 +1,6 @@
 # fdk-extension-bridge-javascript
-FDK Extension Bridge Library
+
+## Setup FDK Extension Bridge Library
 
 ```javascript
 const { Extension, components } = require("@gofynd/fdk-extension-bridge-javascript");
@@ -8,7 +9,7 @@ let ext = new Extension({apiKey: "12345667890"});
 
 ```
 
-For Including Button
+## For Including Button
 ```javascript
 let btn = new components.Button(ext, {
     label: "save"
@@ -21,7 +22,7 @@ btn.dispatch();
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/readme/demo/button.png" alt="Button"><hr>
 
-For Including Toggle Button
+## For Including Toggle Button
 
 ```javascript
 let toggle = new components.ToggleButton(ext, {
@@ -35,7 +36,7 @@ toggle.dispatch({value: true});
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/readme/demo/toggle_button.png" alt="Toggle Button"><hr>
 
-For Including Context Menu Item
+## For Including Context Menu Item
 
 ```javascript
 let context = new components.ContextMenuItem(ext, {
@@ -48,7 +49,7 @@ context.dispatch();
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/readme/demo/context_item.png" alt="Context Item"><hr>
 
-For destroy extesnion bridge
+## For resetting extesnion bridge
 
 ```javascript
 ext.destroy()
