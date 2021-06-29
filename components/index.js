@@ -2,11 +2,11 @@
 
 
 const Button = require("./button.component");
-const Toggle = require("./toggle.component");
-const ContextItem = require("./context_item.component");
+const ToggleButton = require("./toggle_button.component");
+const ContextMenuItem = require("./context_menu_item.component");
 
 module.exports = {
     Button,
-    Toggle,
-    ContextItem
+    ToggleButton,
+    ContextMenuItem
 }

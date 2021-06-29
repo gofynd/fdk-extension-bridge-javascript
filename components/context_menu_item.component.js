@@ -2,39 +2,34 @@
 
 const Component = require("./base.component");
 
-const c_type = 'Toggle';
+const c_type = 'ContextMenuItem';
 const Actions = {
-    CHANGE: 'change'
+    CLICK: 'click'
 };
 
-class Toggle extends Component{
-
+class ContextMenuItem extends Component{
     /**
      * 
      * @param {*} extension 
      * @param {*} config 
      * 
      * {
-     *     "activeLabel": "",
-     *     "inactiveLabel": "",
+     *     "label": "",
      *     "id": "", //optional
-     *     "disabled": true/false // default value false
      * }
      */
     constructor(extension, config) {
         super(extension, c_type, config.id);
-        this.disabled = config.disabled || false;
-        this.activeLabel =  config.activeLabel || 'Active';
-        this.inactiveLabel =  config.inactiveLabel || 'Inactive';
+        this.label =  config.label;
+        this.action = config.action
         this.config = {
-            disabled: this.disabled,
-            activeLabel: this.activeLabel,
-            inactiveLabel: this.inactiveLabel,
+            label: this.label,
+            action: this.action || 'click'
         }
     }
-    
+
     subscribe(eventName, callback) {
-        if(eventName !== Actions.CHANGE) {
+        if(eventName !== Actions.CLICK) {
             return "" // throw error
         }
         return super.subscribe(eventName, callback);
@@ -54,8 +49,8 @@ class Toggle extends Component{
     }
 }
 
-Toggle.Actions = Actions;
-Toggle.component_type = c_type;
+ContextMenuItem.Actions = Actions;
+ContextMenuItem.component_type = c_type;
 
-module.exports = Toggle;
+module.exports = ContextMenuItem;
 

@@ -2,34 +2,39 @@
 
 const Component = require("./base.component");
 
-const c_type = 'ContextItem';
+const c_type = 'ToggleButton';
 const Actions = {
-    CLICK: 'click'
+    CHANGE: 'change'
 };
 
-class ContextItem extends Component{
+class ToggleButton extends Component{
+
     /**
      * 
      * @param {*} extension 
      * @param {*} config 
      * 
      * {
-     *     "label": "",
+     *     "activeLabel": "",
+     *     "inactiveLabel": "",
      *     "id": "", //optional
+     *     "disabled": true/false // default value false
      * }
      */
     constructor(extension, config) {
         super(extension, c_type, config.id);
-        this.label =  config.label;
-        this.action = config.action
+        this.disabled = config.disabled || false;
+        this.activeLabel =  config.activeLabel || 'Active';
+        this.inactiveLabel =  config.inactiveLabel || 'Inactive';
         this.config = {
-            label: this.label,
-            action: this.action || 'click'
+            disabled: this.disabled,
+            activeLabel: this.activeLabel,
+            inactiveLabel: this.inactiveLabel,
         }
     }
-
+    
     subscribe(eventName, callback) {
-        if(eventName !== Actions.CLICK) {
+        if(eventName !== Actions.CHANGE) {
             return "" // throw error
         }
         return super.subscribe(eventName, callback);
@@ -49,8 +54,8 @@ class ContextItem extends Component{
     }
 }
 
-ContextItem.Actions = Actions;
-ContextItem.component_type = c_type;
+ToggleButton.Actions = Actions;
+ToggleButton.component_type = c_type;
 
-module.exports = ContextItem;
+module.exports = ToggleButton;
 
