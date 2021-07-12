@@ -25,11 +25,11 @@ class Button extends Component{
         super(extension, c_type, config.id);
         this.disabled = config.disabled || false;
         this.label =  config.label;
-        this.type = config.type || 'flat';
+        this.buttonType = config.buttonType || 'flat';
         this.config = {
             disabled: this.disabled,
             label: this.label,
-            type: this.type
+            type: this.buttonType
         }
     }
 
@@ -49,7 +49,7 @@ class Button extends Component{
     }
 
 
-    setState({label,disabled,type}) {
+    setState({label,disabled,buttonType}) {
         // to set state of a component
         if(label){
             this.label = label
@@ -58,7 +58,7 @@ class Button extends Component{
             this.disabled = disabled
         }
         if(type){
-            this.type = type
+            this.buttonType = buttonType
         }
         this.dispatch()
     }
