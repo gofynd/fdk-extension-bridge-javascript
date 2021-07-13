@@ -18,15 +18,18 @@ class Button extends Component{
      *     "label": "",
      *     "id": "", //optional
      *     "disabled": true/false // default value false
+     *     "type": "flat/stroke"
      * }
      */
     constructor(extension, config) {
         super(extension, c_type, config.id);
         this.disabled = config.disabled || false;
         this.label =  config.label;
+        this.buttonType = config.buttonType || 'flat';
         this.config = {
             disabled: this.disabled,
-            label: this.label
+            label: this.label,
+            type: this.buttonType
         }
     }
 
@@ -46,13 +49,16 @@ class Button extends Component{
     }
 
 
-    setState({label,disabled}) {
+    setState({label,disabled,buttonType}) {
         // to set state of a component
         if(label){
             this.label = label
         }
         if(disabled){
             this.disabled = disabled
+        }
+        if(type){
+            this.buttonType = buttonType
         }
         this.dispatch()
     }
