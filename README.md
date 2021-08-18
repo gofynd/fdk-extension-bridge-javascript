@@ -49,6 +49,16 @@ context.dispatch();
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/master/demo/context_item.png" alt="Context Item"><hr>
 
+## For Adding Breadcrumb
+
+```javascript
+let breadCrumbs = new components.Breadcrumb(EXT, {
+    displayText: "Export Data",
+});
+breadCrumbs.dispatch();
+```
+<img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/breadcrumb-support/demo/breadcrumb.png" alt="Breadcrumb"><hr>
+
 ## For resetting extesnion bridge
 
 ```javascript

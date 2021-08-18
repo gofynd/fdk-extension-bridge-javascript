@@ -26,16 +26,16 @@ class Breadcrumb extends Component{
         }
     }
     
-    subscribe(eventName, callback) {
-        if(eventName !== Actions.SHOW) {
-            return "" // throw error
-        }
-        return super.subscribe(eventName, callback);
-    }
+    // subscribe(eventName, callback) {
+    //     if(eventName !== Actions.SHOW) {
+    //         return "" // throw error
+    //     }
+    //     return super.subscribe(eventName, callback);
+    // }
 
-    unsubscribe(listnerId) {
-        return super.unsubscribe(listnerId);
-    }
+    // unsubscribe(listnerId) {
+    //     return super.unsubscribe(listnerId);
+    // }
 
     dispatch(payload = null){
         return super.dispatch(this.config, payload);
