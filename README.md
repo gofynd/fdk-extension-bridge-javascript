@@ -49,7 +49,7 @@ context.dispatch();
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/master/demo/context_item.png" alt="Context Item"><hr>
 
-## For Adding Breadcrumb
+## For Including Breadcrumb
 
 ```javascript
 let breadCrumbs = new components.Breadcrumb(EXT, {
