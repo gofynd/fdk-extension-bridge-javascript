@@ -56,7 +56,7 @@ class Component {
         });
     }
 
-    setState(id, payload){
+    setState(config = {}, id, payload){
         let namespace = `${this.type}/${this.eventName}`;
         let dispatchPayload  = {
             target: this.type,
