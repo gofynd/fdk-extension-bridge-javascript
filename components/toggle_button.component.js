@@ -23,7 +23,6 @@ class ToggleButton extends Component{
      */
     constructor(extension, config) {
         super(extension, c_type, config.id);
-        this.parentConfig = config
         this.disabled = config.disabled || false;
         this.activeLabel =  config.activeLabel || 'Active';
         this.inactiveLabel =  config.inactiveLabel || 'Inactive';
@@ -53,7 +52,7 @@ class ToggleButton extends Component{
     setState(payload = null) {
         // to set state of a component
         if(payload){
-            console.log(this.parentConfig)
+            console.log(this.id, payload)
         }
     }
 }
