@@ -50,6 +50,7 @@ class Button extends Component{
 
 
     setState({label,disabled,buttonType}) {
+        // ignore this
         // to set state of a component
         if(label){
             this.label = label
@@ -60,7 +61,6 @@ class Button extends Component{
         if(type){
             this.buttonType = buttonType
         }
-        this.dispatch()
     }
 }
 

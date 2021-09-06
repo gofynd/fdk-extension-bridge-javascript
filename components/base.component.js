@@ -55,6 +55,22 @@ class Component {
             }
         });
     }
+
+    setState(config = {}, id, payload){
+        let namespace = `${this.type}/${this.eventName}`;
+        let dispatchPayload  = {
+            target: this.type,
+            id: `${namespace}:${id}`,
+            action: this.eventName, // click,register,change
+            data: {
+                config
+            }
+        }
+        if(payload) {
+            dispatchPayload.data.payload = payload
+        }
+        this.extension.transport.dispatch(dispatchPayload)
+    }
 }
 
 module.exports = Component;

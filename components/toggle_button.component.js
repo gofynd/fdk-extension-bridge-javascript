@@ -49,8 +49,11 @@ class ToggleButton extends Component{
     }
 
 
-    setState() {
+    setState(payload = null) {
         // to set state of a component
+        if(payload){
+            return super.setState(this.config, this.id, payload);
+        }
     }
 }
 
