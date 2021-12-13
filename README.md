@@ -59,7 +59,34 @@ breadCrumbs.dispatch();
 ```
 <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/breadcrumb-support/demo/breadcrumb.png" alt="Breadcrumb"><hr>
 
-## For resetting extesnion bridge
+## For Including Tags
+
+### Properties
+
+- `tagState` defines the state of the tag, i.e., whether you intend to display it as an information, an error, a success message, a disabled value, or a warning. <br />
+It can take only one of the following values: `info`, `success`, `warn`, `disable`, or `none`. 
+- `fill` decides if the background for the tag should be transparent or not. If the value is `true`, it will fill the tag's background with the color of the selected state. By default, the value is false which means it will have a transparent background. <br />
+It can take either a Boolean value of `true` or `false`.
+- `text` will take a String value that will be displayed as the text of the tag.
+
+```javascript
+let tag1 = new components.Tag(EXT, {
+    tagState: "info",
+    fill: false,
+    text: "Public"
+});
+tag1.dispatch();
+
+let tag2 = new components.Tag(EXT, {
+    tagState: "error",
+    fill: true,
+    text: "Error"
+});
+tag2.dispatch();
+```
+<img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/breadcrumb-support/demo/tag.png" alt="Tag"><hr>
+
+## For resetting extension bridge
 
 ```javascript
 ext.destroy()
