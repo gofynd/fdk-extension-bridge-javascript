@@ -22,7 +22,7 @@ class Tag extends Component {
      */
 
     constructor(extension, config) {
-        super(extension);
+        super(extension, c_type, config.id);
         this.tagState = config.tagState || 'info';
         this.fill = config.fill || false;
         this.text = config.text;
