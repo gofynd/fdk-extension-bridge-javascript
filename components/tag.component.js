@@ -5,6 +5,7 @@ const Component = require('./base.component');
 const c_type = 'Tag';
 
 const Actions = {
+    SHOW: 'show'
 }
 
 class Tag extends Component {
