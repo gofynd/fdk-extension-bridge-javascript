@@ -84,7 +84,7 @@ let tag2 = new components.Tag(EXT, {
 });
 tag2.dispatch();
 ```
-<img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/master/demo/tag.png" alt="Tag"><hr>
+<img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/tag-extension/demo/tag.png" alt="Tag"><hr>
 
 ## For resetting extension bridge
 
