@@ -17,10 +17,11 @@ class UrlBuilder extends Component{
      * @param {*} config 
      * 
      * {
-     *     "label": "",
+     *     "pageType": "",
      *     "id": "", //optional
-     *     "disabled": true/false // default value false
-     *     "type": "flat/stroke"
+     *     "pageParams": []
+     *     "pageQuery": [],
+     *      "urlValue": ""
      * }
      */
     constructor(extension, config) {
@@ -38,7 +39,7 @@ class UrlBuilder extends Component{
     }
 
     subscribe(eventName, callback) {
-        if(eventName !== Actions.CLICK) {
+        if(!Object.values(Actions).includes(eventName)){
             return "" // throw error
         }
         return super.subscribe(eventName, callback);
