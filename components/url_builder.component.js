@@ -29,8 +29,8 @@ class UrlBuilder extends Component{
         super(extension, c_type, config.id);
         this.applicationId = config.applicationId;
         this.pageType = config.pageType || '';
-        this.pageParams = config.pageParams || [];
-        this.pageQuery = config.pageQuery || [];
+        this.pageParams = config.pageParams || {};
+        this.pageQuery = config.pageQuery || {};
         this.urlValue = config.urlValue || '';
         this.config = {
             applicationId: this.applicationId,
