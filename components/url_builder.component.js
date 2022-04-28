@@ -17,6 +17,7 @@ class UrlBuilder extends Component{
      * @param {*} config 
      * 
      * {
+     *     "applicationId": "" // mandatory
      *     "pageType": "",
      *     "id": "", //optional
      *     "pageParams": []
@@ -26,11 +27,13 @@ class UrlBuilder extends Component{
      */
     constructor(extension, config) {
         super(extension, c_type, config.id);
+        this.applicationId = config.applicationId;
         this.pageType = config.pageType || '';
         this.pageParams = config.pageParams || [];
         this.pageQuery = config.pageQuery || [];
         this.urlValue = config.urlValue || '';
         this.config = {
+            applicationId: this.applicationId,
             pageType: this.pageType,
             pageParams: this.pageParams,
             pageQuery: this.pageQuery,
