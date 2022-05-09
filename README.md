@@ -229,10 +229,53 @@ tag2.dispatch();
 <!-- <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/tag-extension/demo/tag.png" alt="Tag"> -->
 <img src="/demo/tag.png" alt="Tag">
 
+<hr />
 
 
-<br /><br />
 
+
+### URL Builder
+
+A URL Builder is useful to generate the pages, blogs, collections URL of Fynd Platform with query and params.
+
+<br />
+
+#### Properties
+
+#### - `applicationId` (Required property)
+- It defines the Application Id for which you want to build the URL Builder.
+- It accepts a value of the type `String`.
+
+#### `pageType` (Optional property) 
+- It defines the type of the page.
+
+#### `pageParams` (Optional property)
+- It decides if the params for the page.
+
+#### `pageQuery` (Optional property)
+- It decides if the query for the page.
+
+#### `urlValue` (Optional property)
+- It decides if the url value for the page.
+
+<br />
+
+#### Sample code to include a tag
+
+```javascript
+let urlBuilder = new components.UrlBuilder(EXT, {
+    applicationId: "asdfghjkl"
+});
+urlBuilder.dispatch();
+```
+#### Preview 
+
+<!-- <img src="https://github.com/gofynd/fdk-extension-bridge-javascript/blob/tag-extension/demo/tag.png" alt="Tag"> -->
+<img src="/demo/url_builder.png" alt="URL Builder">
+
+<hr />
+
+<br/> <br/>
 ## Reset extension bridge
 
 ```javascript
