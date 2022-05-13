@@ -7,6 +7,7 @@ const ContextMenuItem = require("./context_menu_item.component");
 const Breadcrumb = require("./breadcrumb.component");
 const Tag = require("./tag.component");
 const UrlBuilder = require("./url_builder.component");
+const AssetsPicker = require("./assets_picker");
 
 module.exports = {
     Button,
