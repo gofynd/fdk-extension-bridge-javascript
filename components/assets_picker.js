@@ -28,7 +28,7 @@ class AssetsPicker extends Component{
         this.mimeType = config.mimeType || ["jpeg, png"];
         this.assetUrl = config.assetUrl || '';
         this.aspectRatio = config.aspectRatio || "1:1";
-        this.maxSize = config.maxSize || '2mb';
+        this.maxSize = config.maxSize || 2;
         this.config = {
             mimeType: this.mimeType,
             assetUrl: this.assetUrl,
