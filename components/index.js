@@ -15,5 +15,6 @@ module.exports = {
     ContextMenuItem,
     Breadcrumb,
     Tag,
-    UrlBuilder
+    UrlBuilder,
+    AssetsPicker
 }
