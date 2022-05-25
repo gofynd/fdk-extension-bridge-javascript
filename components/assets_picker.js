@@ -17,7 +17,7 @@ class AssetsPicker extends Component{
      * @param {*} config 
      * 
      * {
-     *     "mimeType": [],
+     *     "fileTypes": [],
      *     "assetUrl": "",
      *     "aspectRatio": ""
      *     "maxSize": "",
@@ -25,12 +25,12 @@ class AssetsPicker extends Component{
      */
     constructor(extension, config) {
         super(extension, c_type, config.id);
-        this.mimeType = config.mimeType || ["jpeg, png"];
+        this.fileTypes = config.fileTypes || ["jpeg", "png"];
         this.assetUrl = config.assetUrl || '';
         this.aspectRatio = config.aspectRatio || "1:1";
         this.maxSize = config.maxSize || 2048;
         this.config = {
-            mimeType: this.mimeType,
+            fileTypes: this.fileTypes,
             assetUrl: this.assetUrl,
             aspectRatio: this.aspectRatio,
             maxSize: this.maxSize
@@ -53,11 +53,11 @@ class AssetsPicker extends Component{
     }
 
 
-    setState({mimeType,assetUrl,aspectRatio,maxSize}) {
+    setState({fileTypes,assetUrl,aspectRatio,maxSize}) {
         // ignore this
         // to set state of a component
-        if(mimeType){
-            this.mimeType = mimeType
+        if(fileTypes){
+            this.fileTypes = fileTypes
         }
         if(assetUrl){
             this.assetUrl = assetUrl
