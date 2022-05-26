@@ -29,11 +29,26 @@ class AssetsPicker extends Component{
         this.assetUrl = config.assetUrl || '';
         this.aspectRatio = config.aspectRatio || "1:1";
         this.maxSize = config.maxSize || 2048;
+        this.minimumResolution = config.minimumResolution || {
+            width: 220,
+            height: 220
+        };
+        this.maximumResolution = config.maximumResolution || {
+            width: 1140,
+            height: 1020
+        };
+        this.recommendedResolution = config.recommendedResolution || {
+            width: 1140,
+            height: 1020
+        };
         this.config = {
             fileTypes: this.fileTypes,
             assetUrl: this.assetUrl,
             aspectRatio: this.aspectRatio,
-            maxSize: this.maxSize
+            maxSize: this.maxSize,
+            minimumResolution: this.minimumResolution,
+            maximumResolution: this.maximumResolution,
+            recommendedResolution: this.recommendedResolution
         }
     }
 
@@ -53,7 +68,7 @@ class AssetsPicker extends Component{
     }
 
 
-    setState({fileTypes,assetUrl,aspectRatio,maxSize}) {
+    setState({fileTypes,assetUrl,aspectRatio,maxSize,minimumResolution,maximumResolution,recommendedResolution}) {
         // ignore this
         // to set state of a component
         if(fileTypes){
@@ -67,6 +82,15 @@ class AssetsPicker extends Component{
         }
         if(maxSize){
             this.maxSize = maxSize
+        }
+        if(minimumResolution){
+            this.minimumResolution = minimumResolution
+        }
+        if(maximumResolution){
+            this.maximumResolution = maximumResolution
+        }
+        if(recommendedResolution){
+            this.recommendedResolution = recommendedResolution
         }
     }
 }
