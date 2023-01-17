@@ -1,11 +1,12 @@
 
 class CCI {
 
-  constructor(extensionId, launchUrl, pageData, contextData) {
+  constructor({extensionId, launchUrl, pageData, contextData, iframeElement}) {
     this.extensionId = extensionId;
     this.exetensionLaunchUrl = launchUrl;
     this.pageData = pageData;
     this.contextData = contextData;
+    this.iframeElement = iframeElement;
     this.eventHandlers = {};
     this.dataHandlers = {};
     this.listenEvents();
@@ -19,7 +20,7 @@ class CCI {
       extensionId: this.extensionId,
       eventName: 'launch'
     }
-    this.emitData(data, this.launchUrl);
+    this.emitData(data, this.iframeElement, this.launchUrl);
   }
 
   emitData(data, iframeElement, url) {
