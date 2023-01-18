@@ -13,12 +13,14 @@ class CCI {
   }
 
   // should be called right after creating an object of class inside mirage
-  launch() {
+  launch(actionId) {
     let data = {
       pageData: this.pageData,
       contextData: this.contextData,
       extensionId: this.extensionId,
-      eventName: 'launch'
+      eventName: 'launch',
+      actionId: actionId,
+      action: true
     }
     this.emitData(data, this.iframeElement, this.launchUrl);
   }
@@ -38,15 +40,15 @@ class CCI {
         this.eventHandlers[event.data.eventName].forEach((cb) => {
           cb(event);
         });
-      } else if (this.eventHandlers[event.data.actionId] && event.data.action) {
-        this.eventHandlers[event.data.actionId].resolver(event);
-        delete this.eventHandlers[event.data.actionId];
+      } else if (this.dataHandlers[event.data.actionId] && event.data.action) {
+        this.dataHandlers[event.data.actionId].resolver(event);
+        delete this.dataHandlers[event.data.actionId];
       }
     }, false)
   }
   
   onLaunch(cb) {
-    return this.onEvent('launch', cb);
+    return this.getData('launch');
   }
 
   onEvent(eventName, cb) {
@@ -73,7 +75,7 @@ class CCI {
     this.dataHandlers[actionId] = {
       resolver
     }
-    emitData({ name, actionId })
+    this.emitData({ name, actionId })
     return promise;
   }
 
